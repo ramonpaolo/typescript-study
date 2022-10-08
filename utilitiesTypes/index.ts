@@ -50,3 +50,14 @@ const updateTodo4: Record<Name, ITodo4> = {
 }
 
 updateTodo4.Ramon.describe = 'try update title of Ramon';
+
+// ------------------------------------------- Pick
+
+interface ITodo5 {
+    title: string
+    describe: string
+}
+
+type newTodo = Pick<ITodo5, 'title'>
+
+const updateTodo5: newTodo = {title: 'only title'}
