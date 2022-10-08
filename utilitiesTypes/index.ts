@@ -97,3 +97,14 @@ const f: T2 = 's'
 type T3 = ReturnType<() => string>;
    
 const d: T3 = 's'
+
+// ------------------------------------------- InstanceType
+
+class Test {
+    x = 1;
+    y = '';
+}
+
+type T4 = InstanceType<typeof Test>;
+   
+const c: T4 = new Test()
