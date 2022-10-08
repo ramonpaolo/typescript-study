@@ -85,3 +85,9 @@ const g: T0 = 'a'
 type T1 = Exclude<"a" | "b" | "c", "a" | "c">;
    
 const e: T1 = 'b'
+
+// ------------------------------------------- NonNullable
+
+type T2 = NonNullable<string | null | undefined>;
+   
+const f: T2 = 's'
