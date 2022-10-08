@@ -91,3 +91,9 @@ const e: T1 = 'b'
 type T2 = NonNullable<string | null | undefined>;
    
 const f: T2 = 's'
+
+// ------------------------------------------- ReturnType
+
+type T3 = ReturnType<() => string>;
+   
+const d: T3 = 's'
