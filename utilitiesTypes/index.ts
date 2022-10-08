@@ -79,3 +79,9 @@ const updateTodo6: newTodo2 = {title: 'title', describe: 'removed field date'}
 type T0 = Extract<"a" | "b" | "c", "a" | "f">;
    
 const g: T0 = 'a'
+
+// ------------------------------------------- Exclude
+
+type T1 = Exclude<"a" | "b" | "c", "a" | "c">;
+   
+const e: T1 = 'b'
