@@ -61,3 +61,21 @@ interface ITodo5 {
 type newTodo = Pick<ITodo5, 'title'>
 
 const updateTodo5: newTodo = {title: 'only title'}
+
+// ------------------------------------------- Pick
+
+interface ITodo6 {
+    title: string
+    describe: string
+    date: Date
+}
+
+type newTodo2 = Omit<ITodo6, 'date'>
+
+const updateTodo6: newTodo2 = {title: 'title', describe: 'removed field date'}
+
+// ------------------------------------------- Extract
+
+type T0 = Extract<"a" | "b" | "c", "a" | "f">;
+   
+const g: T0 = 'a'
